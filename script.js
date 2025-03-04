@@ -177,9 +177,14 @@ prevBtn.addEventListener("click", () => {
 
 // Fungsi untuk update film berdasarkan halaman
 function updateMovies() {
-    getMovies(API_URL);
+    const url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=93bb3d275c72443a662d9a27eb74cefc&page=${currentPage}`;
+
+    getMovies(url);
     pageNumber.innerText = `Page ${currentPage}`;
 
     // Nonaktifkan tombol jika di halaman pertama
     prevBtn.disabled = currentPage === 1;
+
+
+    
 }

@@ -204,7 +204,7 @@ main {
 }
 
 #pagination button {
-  background-color: #ffcc00;
+  background-color: #cab26a;
   border: none;
   padding: 10px 15px;
   margin: 5px;
@@ -215,4 +215,9 @@ main {
 #pagination button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+#pageNumber {
+  /* Styling khusus untuk teks page number, misalnya ukuran font, warna, dsb. */
+  font-weight: bold;
 }
