@@ -179,12 +179,16 @@ prevBtn.addEventListener("click", () => {
 function updateMovies() {
     const url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=93bb3d275c72443a662d9a27eb74cefc&page=${currentPage}`;
 
+    console.log("Current Page:", currentPage); // Debugging
+    console.log("Page Number Element:", pageNumber); // Debugging
+
+    pageNumber.innerText = currentPage; // Pastikan ini berjalan
     getMovies(url);
-    pageNumber.innerText = `Page ${currentPage}`;
+
+    // Hanya tampilkan angka halaman, tanpa tulisan "Page"
+    pageNumber.innerText = currentPage;
 
     // Nonaktifkan tombol jika di halaman pertama
     prevBtn.disabled = currentPage === 1;
-
-
-    
 }
+
